@@ -3,11 +3,14 @@
  */
 package CarLab1;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author JavierC
  *
  */
-public class ComputerApp {
+public class ComputerApp implements SelfCheckCapable {
 
 	private String wirelessconnection;
 	
@@ -25,5 +28,17 @@ public class ComputerApp {
 	
 	public void showinformation() {
 		// shows other important information about car
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "ComputerApp";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.7);
 	}
 }

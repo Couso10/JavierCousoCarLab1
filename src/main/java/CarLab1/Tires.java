@@ -3,11 +3,14 @@
  */
 package CarLab1;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author JavierC
  *
  */
-public class Tires extends Component {
+public class Tires extends Component implements SelfCheckCapable {
 
 	private int size;
 	private String location;
@@ -31,5 +34,17 @@ public class Tires extends Component {
 	
 	public void spin() {
 		// it helps the car spin around
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "Tires";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.7);
 	}
 }

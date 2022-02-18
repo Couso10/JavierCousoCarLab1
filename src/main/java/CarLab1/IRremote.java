@@ -3,11 +3,14 @@
  */
 package CarLab1;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author JavierC
  *
  */
-public class IRremote {
+public class IRremote implements SelfCheckCapable {
 
 	private int size;
 	private String infrared;
@@ -36,6 +39,22 @@ public class IRremote {
 	public void gostraight() {
 		// it makes the car go straight
 	}
+	public void itbrakes() {
+		// it makes the car stop
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "IRremote";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.7);
+	}
+	
 
 	
 }

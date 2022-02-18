@@ -3,11 +3,14 @@
  */
 package CarLab1;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author JavierC
  *
  */
-public class Button extends Component {
+public class Button extends Component implements SelfCheckCapable {
 
 	private boolean onoffstate;
 	
@@ -17,6 +20,18 @@ public class Button extends Component {
 	
 	public void turnoff() {
 		// turn off the lights
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "Button";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.5);
 	}
 	
 

@@ -10,24 +10,23 @@ import edu.fiu.jit.SelfCheckUtils;
  * @author JavierC
  *
  */
-public class Display extends Component implements SelfCheckCapable {
+public class CloudServer implements SelfCheckCapable {
 
-	private String color;
-	private String dotmatrix;
+	private String computingservice;
 	
-	public void showmessage() {
-		// it shows the expression being done
+	public void showupdates() {
+		// it shows updates available 
 	}
 
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return "Display";
+		return "CloudServer";
 	}
 
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.randomCheck(0.6);
+		return SelfCheckUtils.randomCheck(0.7);
 	}
 }
